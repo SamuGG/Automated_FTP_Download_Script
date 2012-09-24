@@ -19,23 +19,6 @@ Web site administrators or programmers who need an automatic process to backup s
 > Say you have a web application (CMS-like) where you want a backup section, then you simply would have to put a button with some server-side code calling `backup-web.bat`, and your application will store wherever you want a `.zip` file which contains a backup of your FTP folder.
 
 <br/>
-###Kown Issues
-
-Right now this solution only works on FTP which subfolders doesn't contain blank spaces in folders names.
-
-If your FTP site contains a directory tree like this:
-> FTP root
->> website
->>> subfolder1
->>>> another subfolder <--- problem with this directory name!!!
-
->>> subfolder2
-
-This solution will not work on such directory tree, because there's a subdirectory with blank space on folder's name.
-
-I'm currently working on a better solution without this drawback.
-
-<br/>
 ###Usage
 
 Call `backup_web.bat <FTP_IP_Address> <FTP_username> <FTP_password> <FTP_subfolder> <Local_destination_zip_file>`
@@ -57,3 +40,27 @@ Just execute once
 
     SET PATH=%PATH%;C:\Program Files\7-zip
 
+###Version "no_name_spaces"
+
+Right now this solution only works on FTP which subfolders doesn't contain blank spaces in folders names.
+
+If your FTP site contains a directory tree like this:
+> FTP root
+>> website
+>>> subfolder1
+>>>> another subfolder <--- problem with this directory name!!!
+
+>>> subfolder2
+
+This solution will not work on such directory tree, because there's a subdirectory with blank space on folder's name.
+
+This drawback have been currently overcome on version "name_spaces_allowed" which I recommend always.
+
+<br/>
+###Version "name_spaces_allowed"
+
+This solution has been improved to outcome previous version drawbacks like:
+- subdirectory names with blank spaces now work
+- directory listings type Windows or Unix
+
+Download this version, much much better.
