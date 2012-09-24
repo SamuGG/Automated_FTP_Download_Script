@@ -189,7 +189,7 @@ for /f %%i in ('dir /a /b') do goto ZIPCONTENT
 goto :EMPTYDIR
 
 :ZIPCONTENT
-7z a -tzip -mx9 -mmt=on "..\%~nx5" *.*
+7z a -tzip -mx9 -mmt=on "..\%~nx5" .
 goto :FIN
 
 :EMPTYDIR
