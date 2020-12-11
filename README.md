@@ -49,18 +49,15 @@ If your FTP site contains a directory tree like this:
 >> website
 >>> subfolder1
 >>>> another subfolder <--- problem with this directory name!!!
-
 >>> subfolder2
 
 This solution will not work on such directory tree, because there's a subdirectory with blank space on folder's name.
 
-This drawback have been currently overcome on version "name_spaces_allowed" which I recommend always.
+This drawback has been currently overcome on version "name_spaces_allowed", which I recommend.
 
 <br/>
 ###Version "name_spaces_allowed"
 
 This solution has been improved to outcome previous version drawbacks like:
-- subdirectory names with blank spaces now work
+- subdirectory names with blank spaces
 - directory listings type Windows or Unix
-
-Download this version, much much better.
